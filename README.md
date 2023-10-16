@@ -15,7 +15,7 @@ Ventana_prueba.java, de la misma manera que aparece en mi repositorio...
 Cualquier duda no dudéis en preguntarme o en consultar páginas como stackoverflow.com.
 
 
- Dentro del tema "**Confección de interfaces intro**":
+## Dentro del tema "**Confección de interfaces intro**":
 
 **Ventana_prueba.java**: Esta clase creará una ventana con dos botones, "aceptar" y "cancelar". Es sólo la interfaz de usuario, generada con las herramientas de la vista de diseño de oracle, usando las librerías de Swing.
 
@@ -24,7 +24,7 @@ Cualquier duda no dudéis en preguntarme o en consultar páginas como stackoverf
 **BotonesPuntosCardinalesJFrame.java**: Esta clase es generada directamente con la vista de diseño, arrastrando botones al panel de diseño y cambiando propiedades con la interfaz de la ventana "properties".
 
 
- Dentro del tema "**Confección de interfaces intro**":
+## Dentro del tema "**Confección de interfaces intro**":
 
 **ClasesYComponentes.java**: Esta clase abrirá un JDialog "DialogHola" desde un JButton, y además practicaremos con JLabel, JCheckBox, JRadioButton y ButtonGroup, y por último con un JComboBox.
 
