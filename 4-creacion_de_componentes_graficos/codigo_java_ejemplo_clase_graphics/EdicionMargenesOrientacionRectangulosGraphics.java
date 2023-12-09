@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
+import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.JLabel;
 import javax.swing.JSpinner;
@@ -94,7 +95,18 @@ public class EdicionMargenesOrientacionRectangulosGraphics extends JFrame {
 		SpinnerNumberModel modelo1SpinnerNumberModel = new SpinnerNumberModel(0, 0, 140, 1);
 		spinnerMargenSuperior = new JSpinner(modelo1SpinnerNumberModel);
 		spinnerMargenSuperior.setBounds(172, 39, 63, 20);
-		JSpinner.DefaultEditor editorSup = ((JSpinner.DefaultEditor) spinnerMargenSuperior.getEditor());
+		spinnerMargenSuperior.addChangeListener(new ChangeListener() {
+			
+			@Override
+			public void stateChanged(ChangeEvent arg0) {
+				repaint();
+				
+			}
+		});
+		/**
+		 * Esta es otra manera de hacerlo, pero el repaint solo se ejecuta 
+		 * al pulsar otro spinner...:
+		 * JSpinner.DefaultEditor editorSup = ((JSpinner.DefaultEditor) spinnerMargenSuperior.getEditor());
 		JTextField textFieldSup = editorSup.getTextField();
 		textFieldSup.addFocusListener(new FocusListener() {
 
@@ -109,13 +121,27 @@ public class EdicionMargenesOrientacionRectangulosGraphics extends JFrame {
 
 			}
 		});
+		 */
+		
 
 		contentPane.add(spinnerMargenSuperior);
 
 		SpinnerNumberModel modelo2SpinnerNumberModel = new SpinnerNumberModel(0, 0, 140, 1);
 		spinnerMargenInferior = new JSpinner(modelo2SpinnerNumberModel);
 		spinnerMargenInferior.setBounds(172, 131, 63, 20);
-		JSpinner.DefaultEditor editorInf = ((JSpinner.DefaultEditor) spinnerMargenInferior.getEditor());
+		spinnerMargenInferior.addChangeListener(new ChangeListener() {
+			
+			@Override
+			public void stateChanged(ChangeEvent arg0) {
+				repaint();
+				
+			}
+		});
+		
+		/**
+		 * Esta es otra manera de hacerlo, pero el repaint solo se ejecuta 
+		 * al pulsar otro spinner...:
+		 * JSpinner.DefaultEditor editorInf = ((JSpinner.DefaultEditor) spinnerMargenInferior.getEditor());
 		JTextField textFieldInf = editorInf.getTextField();
 		textFieldInf.addFocusListener(new FocusListener() {
 
@@ -130,6 +156,10 @@ public class EdicionMargenesOrientacionRectangulosGraphics extends JFrame {
 
 			}
 		});
+		 */
+		
+		
+		
 		contentPane.add(spinnerMargenInferior);
 
 		comboBox = new JComboBox();
